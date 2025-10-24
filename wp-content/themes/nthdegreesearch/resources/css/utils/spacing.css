@@ -1,0 +1,13 @@
+@layer components {
+    .nds-padding-sm {
+        @apply py-6
+    }
+
+    .nds-padding-md {
+        @apply py-10
+    }
+
+    .nds-padding-lg {
+        @apply py-36
+    }
+}

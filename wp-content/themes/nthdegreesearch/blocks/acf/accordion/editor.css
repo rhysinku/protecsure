@@ -1,0 +1,21 @@
+.nds_accordion-container--list > .acf-innerblocks-container {
+    display: flex;
+    gap: 24px;
+    flex-direction: column;
+}
+
+.wp-block-nds-accordion-item.has-child-selected .nds_accordion-item--content,
+.wp-block-nds-accordion-item.is-selected .nds_accordion-item--content{
+    max-height: 100%;
+}
+
+.wp-block-nds-accordion-item.has-child-selected .nds_accordion-item--icon,
+.wp-block-nds-accordion-item.is-selected .nds_accordion-item--icon{
+    background: var(--wp--preset--color--trinary);
+}
+
+.wp-block-nds-accordion-item.has-child-selected .nds_accordion-item--icon:before,
+.wp-block-nds-accordion-item.is-selected .nds_accordion-item--icon:before{
+    background: url('../../../assets/images/icons/Close.svg') center no-repeat;
+    filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(7437%) hue-rotate(48deg) brightness(113%) contrast(117%);
+}

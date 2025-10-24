@@ -1,0 +1,4 @@
+    .footer-menu .footer-menu--item > a {
+        text-decoration: none;
+        @apply text-[var(--color-base)]  text-sm font-medium hover:text-trinary
+    }

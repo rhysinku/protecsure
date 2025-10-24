@@ -1,0 +1,38 @@
+.variant-1:before {
+    background: url("../../../assets/images/swirl/background-swirl.svg") center no-repeat;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+}
+
+.variant-2:before {
+    background: url("../../../assets/images/swirl/variant-2.svg") center no-repeat;
+    left: 0;
+    width: 871px;
+    height: 783px;
+    bottom: 0;
+}
+
+.variant-3:before {
+    background: url("../../../assets/images/swirl/varient-3.svg") center no-repeat;
+    width: 1007px;
+    height: 832px;
+    bottom: 0;
+    right: 0;
+}
+
+
+.nds-swirl--container {
+    position: relative;
+    isolation: isolate;
+}
+
+.nds-swirl--container:before {
+    content: '';
+    display: block;
+    z-index: -1;
+
+    position: absolute;
+}

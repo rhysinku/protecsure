@@ -1,0 +1,93 @@
+.nds-content-media-flex {
+    display: flex;
+    --inline-spacing: 1rem;
+    flex-wrap: wrap;
+    align-items: center;
+    row-gap: 24px;
+    @media (min-width: 1024px) {
+        margin-inline: calc(var(--inline-spacing) * -1);
+    }
+}
+
+.nds-content-media.decor-under:before{
+    z-index: -10;
+}
+
+@media (min-width: 1024px) {
+    .nds-content-media--decor .nds-content-figure {
+        flex: 0 0 50%;
+        max-width: 50%;
+        padding-inline: var(--inline-spacing);
+    }
+
+    .nds-content-media--decor .nds-content-content {
+        flex: 0 0 45%;
+        max-width: 45%;
+        padding-inline: var(--inline-spacing);
+    }
+
+
+    .nds-content-media--default .nds-content-figure {
+        flex: 0 0 40%;
+        max-width: 40%;
+        padding-inline: var(--inline-spacing);
+    }
+
+    .nds-content-media--default .nds-content-content {
+        flex: 0 0 60%;
+        max-width: 60%;
+        padding-inline: var(--inline-spacing);
+    }
+}
+
+.nds-figure-media {
+    margin-bottom: 0;
+}
+
+.nds-figure-media img {
+    object-fit: contain;
+    object-position: center;
+}
+
+.nds-content-media--swirl:before {
+    content: '';
+    position: absolute;
+    pointer-events: none;
+    width: 100%;
+    @media (max-width: 1024px) {
+        width: 80%;
+    }
+}
+
+
+.swirl--bottom_left:before {
+    background: url("../../../assets/images/swirl/swirl-bottom-left.svg") no-repeat;
+    max-width: 610px;
+
+    height: 500px;
+    bottom: 0;
+    left: 0;
+    background-size: contain;
+    background-position: left bottom;
+
+}
+
+.swirl--top_left:before {
+    background: url("../../../assets/images/swirl/swirl-top-left.svg") no-repeat;
+    max-width: 475px;
+    height: 620px;
+    top: 0;
+    left: 0;
+    background-size: contain;
+    background-position: left top;
+}
+
+.swirl--bottom_right:before {
+    background: url("../../../assets/images/swirl/swirl-bottom-right.svg") no-repeat;
+    max-width: 570px;
+    height: 520px;
+    bottom: 0;
+    right: 0;
+    background-size: contain;
+    background-position: right bottom;
+}

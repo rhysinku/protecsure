@@ -1,0 +1,22 @@
+{
+  "name": "nds/container",
+  "title": "Container",
+  "description": "Control the container width, etc",
+  "style": [
+    "file:./style.css"
+  ],
+  "category": "nds-blocks",
+  "icon": "editor-aligncenter",
+  "keywords": [
+    "container",
+    "row"
+  ],
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "container.php"
+  },
+  "align": "full",
+  "supports": {
+    "anchor": true
+  }
+}

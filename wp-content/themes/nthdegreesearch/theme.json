@@ -1,0 +1,154 @@
+{
+  "version": 2,
+  "settings": {
+    "layout": {
+      "contentSize": "100vw",
+      "wideSize": "100vw"
+    },
+    "dimensions": {
+      "minHeight": true
+    },
+    "spacing": {
+      "margin": true,
+      "padding": true,
+      "blockGap": true,
+      "units": [
+        "px",
+        "em",
+        "rem",
+        "%",
+        "vw"
+      ],
+      "customSpacingSize": true,
+      "spacingSizes": [
+        {
+          "slug": "none",
+          "size": "0px",
+          "name": "None"
+        },
+        {
+          "slug": "sm",
+          "size": ".625rem",
+          "name": "Small"
+        },
+        {
+          "slug": "md",
+          "size": "1.25rem",
+          "name": "Medium"
+        },
+        {
+          "slug": "lg",
+          "size": "1.875rem",
+          "name": "Large"
+        },
+        {
+          "slug": "xl",
+          "size": "2.5rem",
+          "name": "Extra Large"
+        },
+        {
+          "slug": "2xl",
+          "size": "3.125rem",
+          "name": "2XL Large"
+        }
+      ]
+    },
+    "border": {
+      "color": true,
+      "radius": true,
+      "style": true,
+      "width": true
+    },
+    "color": {
+      "palette": [
+        {
+          "name": "Base",
+          "slug": "base",
+          "color": "#000000"
+        },
+        {
+          "name": "Primary",
+          "slug": "primary",
+          "color": "#73e063"
+        },
+        {
+          "name": "Primary Tint",
+          "slug": "primary-tint",
+          "color": "#d6e5fa"
+        },
+        {
+          "name": "Primary Indigo",
+          "slug": "primary-indigo",
+          "color": "#4f4ffc"
+        },
+        {
+          "name": "Secondary",
+          "slug": "secondary",
+          "color": "#11113f"
+        },
+        {
+          "name": "Trinary",
+          "slug": "trinary",
+          "color": "#d4468e"
+        }
+      ]
+    },
+    "typography": {
+      "lineHeight": true,
+      "fontFamilies": [
+        {
+          "fontFamily": "'Em One', sans-serif",
+          "name": "Em One",
+          "slug": "em-one"
+        },
+        {
+          "fontFamily": "'Raleway', sans-serif",
+          "name": "Raleway",
+          "slug": "raleway"
+        }
+      ],
+      "fontSizes": [
+        {
+          "name": "Small (16px)",
+          "slug": "sm",
+          "size": "1rem"
+        },
+        {
+          "name": "Base(18px)",
+          "slug": "base",
+          "size": "1.125rem"
+        },
+        {
+          "name": "Medium (23px)",
+          "slug": "md",
+          "size": "1.4375rem"
+        },
+        {
+          "name": "Medium 1 (28px)",
+          "slug": "md1",
+          "size": "1.75rem"
+        },
+        {
+          "name": "Medium 2 (33px)",
+          "slug": "md2",
+          "size": "2.0625rem"
+        },
+        {
+          "name": "Large (44px)",
+          "slug": "lg",
+          "size": "2.75rem"
+        },
+        {
+          "name": "2XL (48px)",
+          "slug": "2xl",
+          "size": "3rem"
+        },
+        {
+          "name": "3XL (57px)",
+          "slug": "3xl",
+          "size": "3.5625rem"
+        }
+      ]
+    }
+  }
+}

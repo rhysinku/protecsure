@@ -1,0 +1,21 @@
+{
+  "name": "nds/button-group",
+  "title": "Button Group",
+  "description": "A custom buttons block with various styles and options.",
+  "style": [
+    "file:./style.css"
+  ],
+  "category": "nds-blocks",
+  "icon": "button",
+  "keywords": [
+    "button",
+    "link"
+  ],
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "button-group.php"
+  },
+  "supports": {
+    "anchor": true
+  }
+}

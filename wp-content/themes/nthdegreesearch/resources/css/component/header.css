@@ -1,0 +1,75 @@
+.nds-primary-menu > ul > li {
+    @apply relative;
+}
+
+.nds-primary-menu > ul > li > a {
+    @apply flex items-center gap-x-2.5 text-secondary font-bold font-secondary !no-underline pt-9 pb-[2.125rem] relative transition-all duration-300 min-xl:text-[16px] text-base;
+}
+
+.menu-item.current_page_item a,
+.menu-item a:hover{
+    @apply text-trinary
+}
+
+.nds-primary-menu > ul > li.menu-item-has-children > a > .arrow {
+    background-image: url("data:image/svg+xml,%3Csvg width='11' height='7' viewBox='0 0 11 7' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M9.85472 0.554688L5.48668 4.73629L1.09201 0.581322L0 1.67333L5.46005 7.00021L11 1.69997L9.85472 0.554688Z' fill='%232B2B2B'/%3E%3C/svg%3E%0A");
+}
+
+.nds-primary-menu > ul > li.menu-item-has-children:hover > a > .arrow {
+    @apply transform -rotate-180;
+}
+
+.nds-primary-menu > ul > li.menu-item-has-children > .sub-menu {
+    @apply bg-white absolute rounded-[.625rem] min-w-[12.5rem] opacity-0 invisible py-2 translate-y-2 transition-all duration-300 shadow-[0px_10px_15px_-3px_rgba(0,0,0,0.1)] border border-solid border-[rgba(0,0,0,0.1)] ;
+}
+
+.nds-primary-menu > ul > li.menu-item-has-children:last-child > .sub-menu {
+    @apply right-0
+}
+
+.nds-primary-menu > ul > li.menu-item-has-children:hover > .sub-menu {
+    @apply opacity-100 visible -translate-y-5;
+}
+
+.nds-primary-menu > ul > li.menu-item-has-children > .sub-menu > li > a {
+    @apply text-[1.1875rem] font-secondary !no-underline block py-2 px-5 transition-all duration-300 hover:text-[var(--color-primary)];
+}
+
+.primary-menu-toggle .line {
+    @apply bg-secondary w-7.5 h-[5px] block transition-all duration-300;
+}
+
+.nds-mobile-menu-open .primary-menu-toggle .line {
+    @apply first:transform first:translate-y-[12px] first:rotate-45 [&:nth-child(2)]:opacity-0 last:transform last:translate-y-[-12px] last:-rotate-45
+}
+
+.nds-mobile-menu-open .nds-mobile-menu-wrapper {
+    @apply opacity-100 visible top-0 w-full
+}
+
+
+
+.nds-mobile-primary-menu > ul > li > a,
+.nds-mobile-primary-menu-2 > ul > li > a {
+    @apply flex items-center gap-x-2.5 text-[var(--color-secondary)] font-bold text-[16px] font-secondary no-underline hover:underline  relative transition-all duration-300;
+}
+
+.nds-mobile-primary-menu > ul > li.menu-item-has-children > a > .arrow {
+    @apply absolute top-0 right-0 w-[3.125rem] h-full transition-none;
+    background-image: url("data:image/svg+xml,%3Csvg width='11' height='7' viewBox='0 0 11 7' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M9.85472 0.554688L5.48668 4.73629L1.09201 0.581322L0 1.67333L5.46005 7.00021L11 1.69997L9.85472 0.554688Z' fill='%232B2B2B'/%3E%3C/svg%3E%0A");
+    background-size: 0.625rem;
+    background-position: right center;
+}
+
+.nds-mobile-primary-menu > ul > li.active > a > .arrow {
+    @apply rotate-180;
+    background-position: left center;
+}
+
+.nds-mobile-primary-menu > ul > li .sub-menu {
+    @apply hidden pl-5 pb-1.5
+}
+
+.nds-mobile-primary-menu > ul > li .sub-menu > li > a {
+    @apply flex items-center gap-x-2.5 text-[var(--nds-color-base)] text-[1.1875rem] font-secondary !no-underline py-2 relative transition-all duration-300;
+}

@@ -1,0 +1,24 @@
+{
+  "name": "nds/section",
+  "title": "Section",
+  "description": "A section block built by NDS",
+  "style": [
+    "file:./style.css"
+  ],
+  "category": "nds-blocks",
+  "icon": "menu",
+  "keywords": [
+    "section"
+  ],
+  "textdomain": "nds",
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "section.php"
+  },
+  "parent": [
+    "nds/container"
+  ],
+  "supports": {
+    "anchor": true
+  }
+}

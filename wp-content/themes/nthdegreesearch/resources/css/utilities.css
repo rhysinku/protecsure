@@ -1,0 +1,45 @@
+@utility alignfull {
+    width: 100vw;
+    margin: 0 calc(50% - 50vw) !important;
+}
+
+@utility alignwide {
+    width: calc(200px + var(--wp--style--global--wide-size));
+
+    img {
+        width: 100%;
+        margin: 0 -100px 0 -100px !important;
+    }
+}
+
+@utility alignnone {
+    height: auto;
+    max-width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+@utility container {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@utility aligncenter {
+    margin: 0.5rem auto !important;
+}
+
+@utility mb-7.5 {
+    margin-bottom: var(--spacing-30);
+}
+
+@utility mt-7.5 {
+    margin-top: var(--spacing-30);
+}
+
+@utility gap-7.5 {
+    gap: var(--spacing-30);
+}
+
+@utility bg-primary-gradient {
+    background: linear-gradient(to right, var(--color-primary-indigo),  var(--color-primary));
+}

@@ -1,0 +1,27 @@
+
+.nds_accordion-item > .nds_accordion-item--content {
+    overflow: hidden;
+    transition: max-height 300ms ease;
+    max-height: 0; /* closed state */
+}
+
+.nds_accordion-item--icon {
+    background: var(--wp--preset--color--primary);
+}
+
+.nds_accordion-item--icon:before {
+    content: "";
+    background: url('../../../assets/images/icons/Plus.svg') center no-repeat;
+    width: 14px;
+    aspect-ratio: 1 / 1;
+    transition: all 300ms ease-in-out;
+}
+
+.nds_accordion-item--btn[aria-expanded="true"] > .nds_accordion-item--icon {
+    background: var(--wp--preset--color--trinary);
+}
+
+.nds_accordion-item--btn[aria-expanded="true"] > .nds_accordion-item--icon:before {
+    background: url('../../../assets/images/icons/Close.svg') center no-repeat;
+    filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(7437%) hue-rotate(48deg) brightness(113%) contrast(117%);
+}

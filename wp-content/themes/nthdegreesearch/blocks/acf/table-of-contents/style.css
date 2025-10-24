@@ -1,0 +1,17 @@
+.nds_tob_aside--list {
+    margin: 0;
+    padding: 0;
+}
+
+.nds_tob_aside--list li {
+    list-style-type: none;
+}
+
+.nds_tob_aside--list li a{
+    text-decoration: none;
+    color: var(--nds-color-secondary);
+}
+
+.nds_tob_aside--list li a:hover{
+    color: var(--nds-color-trinary);
+}

@@ -1,0 +1,17 @@
+/*For Editor*/
+.bg-black > .container [aria-label="Block: Yoast Breadcrumbs"] .yoast-breadcrumbs,
+.bg-black > .container [aria-label="Block: Yoast Breadcrumbs"] .yoast-breadcrumbs a,
+.bg-black > .container > .yoast-breadcrumbs,
+.bg-secondary > .container [aria-label="Block: Yoast Breadcrumbs"] .yoast-breadcrumbs,
+.bg-secondary > .container [aria-label="Block: Yoast Breadcrumbs"] .yoast-breadcrumbs a,
+.bg-secondary > .container > .yoast-breadcrumbs {
+    @apply text-white
+}
+
+.yoast-breadcrumbs  {
+    @apply uppercase font-secondary text-black font-bold py-4;
+}
+
+.yoast-breadcrumbs a{
+    @apply no-underline text-inherit font-normal;
+}

@@ -1,0 +1,12 @@
+.testimonial-carousel-list--editor {
+    --inline-spacing: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    margin-inline: calc(var(--inline-spacing) * -1);
+}
+
+.testimonial-carousel-list--editor > * {
+    flex: 0 0 33.33333%;
+    max-width: 33.33333%;
+    padding-inline: var(--inline-spacing);
+}

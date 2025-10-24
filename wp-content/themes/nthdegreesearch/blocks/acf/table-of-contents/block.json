@@ -1,0 +1,28 @@
+{
+  "name": "nds/table-of-content",
+  "title": "Table of Content Block",
+  "description": "A Block that add Table of Content ",
+  "style": [
+    "file:./style.css"
+  ],
+  "script": [
+    "file:./script.js"
+  ],
+  "category": "nds-blocks",
+  "icon": "media-document",
+  "keywords": [
+    "section"
+  ],
+  "textdomain": "nds",
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "index.php"
+  },
+  "parent": [
+    "nds/container",
+    "nds/section"
+  ],
+  "supports": {
+    "anchor": true
+  }
+}

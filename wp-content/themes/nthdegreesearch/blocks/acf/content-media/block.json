@@ -1,0 +1,17 @@
+{
+  "name": "nds/content-media",
+  "title": "Content Media",
+  "description": "A custom content media block with various styles and options.",
+  "style": [
+    "file:./style.css"
+  ],
+  "category": "nds-blocks",
+  "icon": "align-pull-left",
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "content-media.php"
+  },
+  "supports": {
+    "anchor": true
+  }
+}

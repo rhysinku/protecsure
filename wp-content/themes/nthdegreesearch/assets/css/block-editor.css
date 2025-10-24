@@ -1,0 +1,62 @@
+/**
+*** WP default style
+**/
+@import "font.css";
+
+:root {
+    --wp-body-font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+    --wp-body-font-size: 13px;
+    --wp-body-line-height: 1.4em;
+}
+
+body.block-editor-page {
+    color: #3c434a;
+    font-family: var(--wp-body-font);
+    font-size: var(--wp-body-font-size);
+    line-height: var(--wp-body-line-height);
+}
+
+.components-panel__body > .components-panel__body-title {
+    font-family: inherit;
+}
+
+#poststuff .stuffbox > h3, #poststuff h2, #poststuff h3.hndle {
+    font-family: inherit;
+}
+
+.wp-core-ui .button, .wp-core-ui .button-primary, .wp-core-ui .button-secondary {
+    font-weight: normal;
+    letter-spacing: 0;
+    text-transform: none;
+}
+
+.wp-core-ui .button::after, .wp-core-ui .button-primary::after, .wp-core-ui .button-secondary::after {
+    display: none;
+}
+
+
+:where(.editor-styles-wrapper) .is-root-container {
+    color: var(--color-base);
+    font-family: var(--font-family-base);
+    font-size: var(--font-base-size);
+    font-weight: var(--font-base-weight);
+    line-height: var(--base-line-height);
+}
+
+:where(.editor-styles-wrapper) h1, :where(.editor-styles-wrapper) h2, :where(.editor-styles-wrapper) h3, :where(.editor-styles-wrapper) h4, :where(.editor-styles-wrapper) h5, :where(.editor-styles-wrapper) h6, :where(.editor-styles-wrapper) p {
+    margin: 0;
+    font-size: revert-layer;
+}
+
+:root :where(.editor-styles-wrapper) :where(.is-layout-flow) > * {
+    margin-top: 0 !important;
+}
+
+:where(.editor-styles-wrapper) ol, :where(.editor-styles-wrapper) ul {
+    padding: revert-layer;
+}
+
+:where(.editor-styles-wrapper) .youtube-wrapper {
+    top: 0;
+    left: 0;
+}

@@ -1,0 +1,22 @@
+@source inline("{hover:,}bg-primary-tint");
+
+@source inline("bg-primary-gradient");
+@source inline("object-cover object-contain object-fill object-none");
+@source inline("object-left object-right object-center object-bottom object-top object-left-bottom object-left-top object-right-bottom object-right-top");
+
+@source inline("lg:ml-auto");
+@source inline("right-0 left-0");
+
+@source inline("font-medium font-semibold font-bold");
+
+
+@source inline("lg:w-full lg:w-3/4 lg:w-2/4");
+
+@source inline("nds_pt-none nds_pt-xxsm nds_pt-xsm nds_pt-sm nds_pt-md nds_pt-lg");
+@source inline("nds_pb-none nds_pb-xxsm nds_pb-xsm nds_pb-sm nds_pb-md nds_pb-lg");
+
+@source inline("md:nds_pt-none md:nds_pt-xxsm md:nds_pt-xsm md:nds_pt-sm md:nds_pt-md md:nds_pt-lg");
+@source inline("md:nds_pb-none md:nds_pt-xxsm md:nds_pb-xsm md:nds_pb-sm md:nds_pb-md md:nds_pb-lg");
+
+@source inline("lg:nds_pt-none lg:nds_pt-xxsm lg:nds_pt-xsm lg:nds_pt-sm lg:nds_pt-md lg:nds_pt-lg");
+@source inline("lg:nds_pb-none lg:nds_pb-xxsm lg:nds_pb-xsm lg:nds_pb-sm lg:nds_pb-md lg:nds_pb-lg");

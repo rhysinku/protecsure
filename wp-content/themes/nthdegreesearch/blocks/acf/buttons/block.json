@@ -1,0 +1,16 @@
+{
+    "name": "nds/buttons",
+    "title": "Buttons",
+    "description": "A custom button block with various styles and options.",
+    "style": [ "file:./style.css" ],
+    "category": "nds-blocks",
+    "icon": "button",
+    "keywords": ["button", "link"],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "buttons.php"
+    },
+    "supports": {
+        "anchor": true
+    }
+}

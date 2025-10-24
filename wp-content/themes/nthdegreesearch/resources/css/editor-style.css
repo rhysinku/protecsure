@@ -1,0 +1,81 @@
+@import 'tailwindcss';
+@import '../css/atoms/image.css';
+@import './theme.css';
+
+/*
+  The default border color has changed to `currentColor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+    *,
+    ::after,
+    ::before,
+    ::backdrop,
+    ::file-selector-button {
+        border-color: var(--color-gray-200, currentColor);
+    }
+}
+
+@layer base {
+    :where(.editor-styles-wrapper) h1.wp-block-post-title {
+        @apply text-black text-4xl font-bold [font-family:var(--wp-body-font)] text-center mb-12;
+    }
+
+}
+
+.section .block-editor-block-list__layout,
+.section .acf-block-component {
+    @apply static;
+}
+
+
+.editor-styles-wrapper {
+    @apply max-w-[1920px] w-full mx-auto;
+}
+
+ul.wp-block-list > li > div,
+ol.wp-block-list > li > div {
+    @apply inline
+}
+
+ol.wp-block-list, ul.wp-block-list {
+    @apply flex flex-col gap-y-4;
+}
+
+ul.wp-block-list {
+    @apply relative
+}
+
+ul.wp-block-list > li {
+    @apply !static
+}
+
+@layer base {
+    h1, .h1 {
+        @apply text-3xl
+    }
+
+    h2, .h2 {
+        @apply text-2xl
+    }
+
+    h3, .h3 {
+        @apply text-lg
+    }
+
+    h4, .h4 {
+        @apply text-2md
+    }
+
+    h5, .h5 {
+        @apply text-1md
+    }
+
+    h6, .h6 {
+        @apply text-md
+    }
+}

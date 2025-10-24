@@ -1,0 +1,119 @@
+/* Tailwind components layer */
+@layer components {
+    .nds_form_7--container {
+        @apply bg-white max-w-[800px] w-full rounded-lg mx-auto lg:p-10 p-5 ;
+    }
+
+    .nds_form_7--content {
+        @apply mb-10 text-secondary;
+    }
+
+    .nds_form_7--content h4 {
+        @apply text-secondary pb-6;
+    }
+
+    .nds_form_7--content p {
+        @apply text-secondary font-medium;
+    }
+
+    .nds_form_7--form-container {
+        @apply flex flex-col gap-6;
+    }
+
+
+    .nds_form_7__input > label,
+    .nds_form_7--info {
+        @apply block font-semibold text-secondary text-sm mb-2;
+    }
+
+    .nds_form_7__input input[type="text"],
+    .nds_form_7__input input[type="email"],
+    .nds_form_7__input input[type="tel"],
+    .nds_form_7--field textarea,
+    .nds_form_7--select .wpcf7-form-control-wrap,
+    .nds_form_7--textarea textarea {
+        @apply w-full bg-white text-secondary border border-[#cfd6e6] rounded-[10px]
+        px-4 py-[14px] text-base leading-[1.45]
+        shadow-[inset_0_1px_0_rgba(10,18,60,.02)]
+        outline-none transition
+        focus:border-[#9fb0ff] focus:ring-4 focus:ring-[rgba(159,176,255,.35)]
+        placeholder:text-[#9aa3b5];
+    }
+
+    .nds_form_7--checkbox .cf7-check {
+        @apply mt-4 flex flex-wrap gap-[25px];
+    }
+
+    .nds_form_7--checkbox .wpcf7-list-item {
+        @apply !m-0 !block !w-full;
+    }
+
+    .nds_form_7--checkbox .wpcf7-list-item label {
+        @apply flex items-center gap-2.5;
+    }
+
+    .nds_form_7--checkbox input[type="checkbox"] {
+        @apply appearance-none w-5 h-5 rounded-[6px] border border-[#cfd6e6] bg-white
+        inline-grid place-content-center
+        transition
+        focus:outline-none focus:ring-4 focus:ring-[rgba(159,176,255,.35)] focus:border-[#9fb0ff]
+        checked:bg-[#59dc78] checked:border-[#59dc78]
+        checked:bg-center checked:bg-no-repeat checked:bg-[length:12px_10px];
+        /* Tick mark via SVG background */
+        background-image: none;
+    }
+
+    .nds_form_7--checkbox input[type="checkbox"]:checked {
+        background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='10' viewBox='0 0 12 10'><path d='M1 5l3 3 7-7' stroke='%230b1a0f' stroke-width='2' fill='none' stroke-linecap='round' stroke-linejoin='round'/></svg>");
+    }
+
+    .nds_form_7--select .wpcf7-form-control-wrap {
+        @apply w-full block
+    }
+
+    .nds_form_7--select .wpcf7-form-control-wrap select {
+        @apply w-full
+    }
+
+    .nds_form_7--col2 {
+        --inline-spacing: 32px;
+        display: flex;
+        flex-wrap: wrap;
+        row-gap: 32px;
+        margin-inline: calc(var(--inline-spacing) * -1);
+    }
+
+
+    .nds_form_7--col2 > .col {
+        flex: 0 0 100%;
+        max-width: 100%;
+        padding-inline: var(--inline-spacing);
+        @media (min-width: 992px) {
+            flex: 0 0 50%;
+            max-width: 50%;
+        }
+    }
+
+
+    .nds_form_7__input {
+        @apply flex flex-col;
+    }
+
+    .nds_form_7__input .required,
+    .nds_form_7--info .required {
+        @apply text-[#c62828];
+    }
+
+    .nds_form_7--textarea textarea {
+        @apply w-full h-[112px];
+    }
+
+    .nds_form_7--footer {
+        @apply flex justify-between;
+    }
+
+    .wpcf7-response-output {
+        @apply bg-white rounded-[32px] p-2.5 text-center;
+    }
+
+}

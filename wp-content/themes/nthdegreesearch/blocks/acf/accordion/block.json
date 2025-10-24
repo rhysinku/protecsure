@@ -1,0 +1,19 @@
+{
+  "name": "nds/accordion",
+  "title": "Accordion",
+  "description": "A custom Accordion block that display Accordion Item",
+  "style": [
+    "file:./style.css"
+  ],
+  "editorStyle": "file:./editor.css",
+  "script": "file:./script.js",
+  "category": "nds-blocks",
+  "icon": "menu-alt3",
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "index.php"
+  },
+  "supports": {
+    "anchor": true
+  }
+}

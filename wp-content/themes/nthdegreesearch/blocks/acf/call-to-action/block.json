@@ -1,0 +1,15 @@
+{
+  "name": "nds/cta",
+  "title": "Call To Action",
+  "description": "A custom Call to Action block that display the Heading and Information",
+  "style": ["file:./style.css"],
+  "category": "nds-blocks",
+  "icon": "megaphone",
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "index.php"
+  },
+  "supports": {
+    "anchor": true
+  }
+}

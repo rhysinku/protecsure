@@ -1,0 +1,16 @@
+{
+  "name": "nds/hero",
+  "title": "Hero",
+  "description": "A custom button block that display hero layout",
+  "style": [ "file:./style.css" ],
+  "category": "nds-blocks",
+  "icon": "superhero-alt",
+  "keywords": ["hero"],
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "hero.php"
+  },
+  "supports": {
+    "anchor": true
+  }
+}
