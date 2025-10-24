@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Header content template
  *
@@ -8,16 +9,6 @@
 $header_class = ' relative z-50 bg-white transition-all duration-200';
 
 $acf_general_settings = get_field('acf_general_settings', 'option');
-$logo_width = !empty($acf_general_settings['logo_width']) ? esc_attr($acf_general_settings['logo_width']) : '';
-$logo_height = !empty($acf_general_settings['logo_height']) ? esc_attr($acf_general_settings['logo_height']) : '';
-$attr = '';
-if ($logo_width) {
-  $attr .= ' width="' . $logo_width . '"';
-}
-if ($logo_height) {
-  $attr .= ' height="' . $logo_height . '"';
-}
-
 $acf_header_settings = get_field('acf_header_settings', 'option');
 $header_cta = $acf_header_settings['header_cta'] ?? '';
 $header_cta_buttons = $header_cta['buttons'] ?? '';
@@ -28,7 +19,7 @@ $header_2_nav = $acf_header_settings['header_2_menu'] ?? '';
   <div class="container">
     <div class="lg:flex lg:justify-between lg:items-center">
       <div class="w-full flex justify-between items-center xl:gap-x-16 gap-x-2.5">
-        <div class="relative max-w-fit min-lg:max-w-[9.375rem] min-xl:max-w-fit">
+        <div class="relative max-w-[144px]">
           <?php if (has_custom_logo()) { ?>
             <?php the_custom_logo(); ?>
           <?php } else { ?>
@@ -63,10 +54,10 @@ $header_2_nav = $acf_header_settings['header_2_menu'] ?? '';
                 $title = $item['page_link']['title'] ?? '';
                 $url = $item['page_link']['url'] ?? '#';
                 $target = $item['page_link']['target'] ?: '_self';
-                ?>
+              ?>
                 <li>
                   <a href="<?php echo esc_url($url); ?>" target="<?php echo esc_attr($target); ?>"
-                     class="flex items-center gap-x-2.5 text-secondary font-bold !no-underline pt-9 pb-[2.125rem] relative transition-all duration-300 min-xl:text-[16px] text-base hover:text-trinary">
+                    class="flex items-center gap-x-2.5 text-secondary font-bold !no-underline pt-9 pb-[2.125rem] relative transition-all duration-300 min-xl:text-[16px] text-base hover:text-trinary">
                     <?php echo esc_html($title); ?>
                   </a>
                 </li>
@@ -80,8 +71,8 @@ $header_2_nav = $acf_header_settings['header_2_menu'] ?? '';
                 $link = $button['link'];
                 $custom_class = $button['custom_class']; ?>
 
-                <a href="<?php echo esc_url($link['url']); ?>" class="nds-btn nds-btn-primary"
-                   target="<?php echo esc_attr($link['target']); ?>">
+                <a href="<?php echo esc_url($link['url']); ?>" class="nds-btn nds-btn-primary <?php echo $custom_class ?>"
+                  target="<?php echo esc_attr($link['target']); ?>">
                   <?php echo esc_html($link['title']); ?>
                 </a>
 

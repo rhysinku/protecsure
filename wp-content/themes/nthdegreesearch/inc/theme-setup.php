@@ -100,34 +100,6 @@ function nds_add_parent_class($classes) {
 }
 
 /**
- * Set custom width and height for the logo
- */
-add_filter('get_custom_logo', 'nds_custom_logo_size');
-function nds_custom_logo_size($html) {
-  $acf_general_settings = get_field('acf_general_settings', 'option');
-
-  if ($acf_general_settings) {
-    $logo_width = !empty($acf_general_settings['logo_width']) ? esc_attr($acf_general_settings['logo_width']) : '';
-    $logo_height = !empty($acf_general_settings['logo_height']) ? esc_attr($acf_general_settings['logo_height']) : '';
-
-    $attr = '';
-    if ($logo_width) {
-      $attr .= ' width="' . $logo_width . '"';
-    }
-    if ($logo_height) {
-      $attr .= ' height="' . $logo_height . '"';
-    }
-
-    if ($attr) {
-      $html = preg_replace('/<img(.*?)>/', '<img$1' . $attr . '>', $html);
-    }
-  }
-
-  return $html;
-}
-
-
-/**
  * Adds option 'li_class' to 'wp_nav_menu'.
  *
  * @param string $classes String of classes.
