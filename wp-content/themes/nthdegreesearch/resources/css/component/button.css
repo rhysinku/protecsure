@@ -3,7 +3,7 @@
 }
 
 .nds-btn {
-    @apply uppercase flex gap-[0.813rem] justify-center items-center !no-underline text-sm font-bold leading-[142.857%] rounded-full py-4 px-8 transition duration-300 [transition-timing-function:cubic-bezier(0.46,0.03,0.52,0.96)];
+    @apply uppercase flex gap-[0.813rem] justify-center items-center !no-underline text-[18px] italic font-semibold leading-[100%] rounded-full py-3 px-[30px] transition duration-300 [transition-timing-function:cubic-bezier(0.46,0.03,0.52,0.96)];
 }
 
 .nds-btn-sm {
@@ -15,9 +15,9 @@
 }
 
 .nds-btn-primary {
-    @apply bg-primary hover:bg-secondary hover:text-white font-bold text-secondary ;
+    @apply bg-secondary hover:bg-secondary hover:text-white font-bold text-secondary ;
 }
 
 .nds-btn-secondary {
-    @apply bg-secondary text-white hover:bg-primary hover:text-white;
+    @apply bg-primary text-white hover:bg-primary hover:text-white;
 }

@@ -3,7 +3,7 @@
 }
 
 .nds-primary-menu > ul > li > a {
-    @apply flex items-center gap-x-2.5 text-secondary font-bold font-secondary !no-underline pt-9 pb-[2.125rem] relative transition-all duration-300 min-xl:text-[16px] text-base;
+    @apply flex items-center gap-x-2.5 text-base font-light font-secondary !no-underline relative transition-all duration-300 text-[16px];
 }
 
 .menu-item.current_page_item a,

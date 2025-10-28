@@ -6,7 +6,7 @@
  * @package NDS
  */
 
-$header_class = ' relative z-50 bg-white transition-all duration-200';
+$header_class = 'fixed z-50 w-full';
 
 $acf_general_settings = get_field('acf_general_settings', 'option');
 $acf_header_settings = get_field('acf_header_settings', 'option');
@@ -15,9 +15,15 @@ $header_cta_buttons = $header_cta['buttons'] ?? '';
 $header_2_nav = $acf_header_settings['header_2_menu'] ?? '';
 
 ?>
-<header class="nds-header <?php echo $header_class; ?> py-[.9375rem] min-lg:py-0">
+<div>
   <div class="container">
-    <div class="lg:flex lg:justify-between lg:items-center">
+    <p class="text-[14px] py-3.5">Our team will be on holiday from 23 December 2025 to 9 January 2026. We look forward to reconnecting with you in the new year!</p>
+  </div>
+</div>
+
+<header class="nds-header <?php echo $header_class; ?> min-lg:py-0">
+  <div class="w-full mx-auto max-w-[1240px] relative">
+    <div class="lg:flex lg:justify-between lg:items-center shadow-lg px-10 rounded-full py-2.5">
       <div class="w-full flex justify-between items-center xl:gap-x-16 gap-x-2.5">
         <div class="relative max-w-[144px]">
           <?php if (has_custom_logo()) { ?>
