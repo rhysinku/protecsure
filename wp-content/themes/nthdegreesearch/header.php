@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html <?php language_attributes(); ?> class="overflow-x-hidden">
+
 <head>
   <meta charset="<?php bloginfo('charset'); ?>">
   <meta name="viewport" content="width=device-width">
@@ -11,15 +12,15 @@
 
 <body <?php body_class('bg-white text-gray-900 antialiased overflow-x-hidden max-w-[1920px] mx-auto! w-full'); ?>
 
-<?php do_action('nds_site_before'); ?>
+  <?php do_action('nds_site_before'); ?>
 
-<div id="page" class="min-h-screen flex flex-col">
+  <div id="page" class="min-h-screen flex flex-col">
 
   <?php do_action('nds_header'); ?>
 
   <?php get_template_part('template-parts/layout/header', 'content'); ?>
 
-  <div id="content" class="site-content grow">
+  <div id="content" class="site-content grow bg-red-950 h-[815vh]">
 
     <?php do_action('nds_content_start'); ?>
 

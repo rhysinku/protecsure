@@ -1,4 +1,8 @@
     .footer-menu .footer-menu--item > a {
         text-decoration: none;
-        @apply text-[var(--color-base)]  text-sm font-medium hover:text-trinary
+        @apply text-sm font-normal hover:text-primary text-white italic
     }
+
+      .footer-menu .footer-menu--item > .sub-menu {
+        @apply mt-2.5
+      }
