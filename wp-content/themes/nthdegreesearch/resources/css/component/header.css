@@ -28,7 +28,7 @@
 }
 
 .nds-primary-menu > ul > li.menu-item-has-children:hover > .sub-menu {
-    @apply opacity-100 visible -translate-y-5;
+    @apply opacity-100 visible;
 }
 
 .nds-primary-menu > ul > li.menu-item-has-children > .sub-menu > li > a {

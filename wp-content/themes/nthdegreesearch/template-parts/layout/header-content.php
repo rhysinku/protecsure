@@ -77,7 +77,7 @@ $header_2_nav = $acf_header_settings['header_2_menu'] ?? '';
                 $link = $button['link'];
                 $custom_class = $button['custom_class']; ?>
 
-                <a href="<?php echo esc_url($link['url']); ?>" class="nds-btn nds-btn-primary <?php echo $custom_class ?>"
+                <a href="<?php echo esc_url($link['url']); ?>" class="no-underline! <?php echo $custom_class ?>"
                   target="<?php echo esc_attr($link['target']); ?>">
                   <?php echo esc_html($link['title']); ?>
                 </a>

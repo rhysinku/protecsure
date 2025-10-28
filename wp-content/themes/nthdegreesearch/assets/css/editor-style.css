@@ -814,6 +814,12 @@
   .\!no-underline {
     text-decoration-line: none !important;
   }
+  .no-underline {
+    text-decoration-line: none;
+  }
+  .no-underline\! {
+    text-decoration-line: none !important;
+  }
   .antialiased {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
