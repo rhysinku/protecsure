@@ -20,7 +20,7 @@
 
   <?php get_template_part('template-parts/layout/header', 'content'); ?>
 
-  <div id="content" class="site-content grow bg-red-950 h-[815vh]">
+  <div id="content" class="site-content grow lg:mt-16">
 
     <?php do_action('nds_content_start'); ?>
 

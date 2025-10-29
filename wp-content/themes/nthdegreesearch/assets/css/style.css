@@ -1078,6 +1078,11 @@
       margin-block: calc(var(--spacing) * 0);
     }
   }
+  .lg\:mt-16 {
+    @media (width >= 1024px) {
+      margin-top: calc(var(--spacing) * 16);
+    }
+  }
   .lg\:mr-0 {
     @media (width >= 1024px) {
       margin-right: calc(var(--spacing) * 0);
