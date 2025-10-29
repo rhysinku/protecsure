@@ -31,11 +31,13 @@ function nds_has_menu_items($theme_location)
 $acf_footer_settings = get_field('acf_footer_settings', 'option');
 $logo = $acf_footer_settings['footer_logo'] ?? '';
 $social_media = $acf_footer_settings['social_media'] ?? '';
-$footer_side = $acf_footer_settings['footer_side'] ?? '';
+$footer_side = $acf_footer_settings['footer_buttons'] ?? '';
 $copyright_side = $acf_footer_settings['footer_copyright_text'] ?? '';
+$for_more_information = $acf_footer_settings['for_more_information'] ?? '';
+$for_claims = $acf_footer_settings['for_claims'] ?? '';
 
 ?>
-<footer id="colophon" class="site-footer bg-trinary overflow-x-hidden" role="contentinfo">
+<footer id="footer" class="site-footer bg-trinary overflow-x-hidden" role="contentinfo">
   <div class="container py-[50px]">
     <div class="flex justify-between flex-col lg:flex-row gap-y-8 gap-x-[76px]">
       <div class="relative max-w-[275px] w-full">
@@ -45,23 +47,25 @@ $copyright_side = $acf_footer_settings['footer_copyright_text'] ?? '';
               alt="<?php echo get_bloginfo('name'); ?>">
           </figure>
         <?php endif; ?>
-
         <div class="mt-6 flex flex-col gap-y-3">
-          <div class="text-white">
-            <h2 class="text-white text-[18px] font-bold mb-4">For More Information</h2>
-            <div class="text-[16px]">
-              <a href="">info@protecsure.com.au</a>
-              <address>1300 COVERIT (1300 268 374)</address>
+          <?php if (!empty($for_more_information)) : ?>
+            <div class="text-white">
+              <h2 class="text-white text-[18px] font-bold mb-4">For More Information</h2>
+              <div class="text-[16px] footer-info">
+                <?php echo apply_filters('the_content', $for_more_information); ?>
+              </div>
             </div>
-          </div>
+          <?php endif; ?>
 
-          <div class="text-white">
-            <h2 class="text-white text-[18px] font-bold mb-4">For Claims</h2>
-            <div class="text-[16px]">
-              <a href="">claims@protecsure.com.au</a>
-              <address>1300 MYCLAIM (1300 692 524)</address>
+          <?php if (!empty($for_claims)) : ?>
+            <div class="text-white">
+              <h2 class="text-white text-[18px] font-bold mb-4">For Claims</h2>
+              <div class="text-[16px] footer-info">
+                <?php echo apply_filters('the_content', $for_claims); ?>
+              </div>
             </div>
-          </div>
+          <?php endif; ?>
+
         </div>
       </div>
 
@@ -85,10 +89,9 @@ $copyright_side = $acf_footer_settings['footer_copyright_text'] ?? '';
           </div>
 
           <div class="max-w-[166px] w-full">
-
-            <?php if ($footer_side['link']) : ?>
+            <?php if ($footer_side) : ?>
               <ul>
-                <?php foreach ($footer_side['link'] as $footer_link) :
+                <?php foreach ($footer_side as $footer_link) :
                   $link = $footer_link['link'];
                   $className = $footer_link['classname']
                 ?>
@@ -150,10 +153,6 @@ $copyright_side = $acf_footer_settings['footer_copyright_text'] ?? '';
       <?php endif; ?>
     </div>
   </div>
-
-
-
-
 
 </footer>
 

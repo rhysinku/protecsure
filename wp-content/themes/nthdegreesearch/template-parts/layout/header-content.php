@@ -11,15 +11,18 @@ $header_class = 'fixed z-50 w-full';
 $acf_general_settings = get_field('acf_general_settings', 'option');
 $acf_header_settings = get_field('acf_header_settings', 'option');
 $header_cta = $acf_header_settings['header_cta'] ?? '';
+$header_notif = $acf_header_settings['notify'] ?? '';
 $header_cta_buttons = $header_cta['buttons'] ?? '';
 $header_2_nav = $acf_header_settings['header_2_menu'] ?? '';
 
 ?>
-<div>
-  <div class="container">
-    <p class="text-[14px] py-3.5">Our team will be on holiday from 23 December 2025 to 9 January 2026. We look forward to reconnecting with you in the new year!</p>
+<?php if (!empty($header_notif)) : ?>
+  <div>
+    <div class="container">
+      <p class="text-[14px] py-3.5"><?php echo esc_html($header_notif) ?></p>
+    </div>
   </div>
-</div>
+<?php endif; ?>
 
 <header class="nds-header <?php echo $header_class; ?> min-lg:py-0">
   <div class="w-full mx-auto max-w-[1240px] relative">
