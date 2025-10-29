@@ -1,8 +1,19 @@
-    .footer-menu .footer-menu--item > a {
+    .nds-quick-link-menu .footer-menu--item > a {
         text-decoration: none;
         @apply text-sm font-normal hover:text-primary text-white italic
     }
 
-      .footer-menu .footer-menu--item > .sub-menu {
+      .nds-quick-link-menu .footer-menu--item > .sub-menu {
         @apply mt-2.5
+      }
+
+
+      .nds-footer-more-menu li a{
+        @apply underline text-white hover:text-primary;
+      }
+
+
+
+      .footer-info a{
+        @apply text-white no-underline
       }
