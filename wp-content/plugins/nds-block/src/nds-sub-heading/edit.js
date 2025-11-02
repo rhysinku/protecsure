@@ -19,7 +19,7 @@ export default function Edit(props) {
 			<RichText
 				tagName={"span"}
 				value={subHeading}
-				className={"font-light text-base text-system-base block"}
+				className={"font-light text-system-base block"}
 				allowedFormats={[]}
 				onChange={(newVal) => setAttributes({ subHeading: newVal })}
 				placeholder={"sub Heading"}

@@ -12,7 +12,7 @@ export default function save(props) {
 			<RichText.Content
 				tagName={"span"}
 				value={subHeading}
-				className={"font-light text-base text-system-base block"}
+				className={"font-light text-system-base block"}
 			/>
 		</div>
 	);
