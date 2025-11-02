@@ -17,9 +17,8 @@ $block_settings['block_data'] = array(
   'block_name' => $block_name
 );
 
-$block_settings['content_media_style'] = get_field('content_media_style');
+$block_settings['background_color'] = get_field('background_color');
 $block_settings['image'] = get_field('image');
-$block_settings['display_icon_under'] = get_field('display_icon_under');
 $block_settings['image_x'] = get_field('image_position_x');
 $block_settings['image_position_in_mobile'] = get_field('image_position_in_mobile');
 

@@ -1,4 +1,12 @@
 <?php
+
+
+
+require_once get_template_directory() . '/inc/blocks/content-media.php';
+
+
+
+
 /**
  * Section and Container block video background
  */
@@ -238,167 +246,7 @@ function nds_container_block_render($block, $block_settings) {
   return ob_get_clean();
 }
 
-//Content Media
-function nds_content_media_render($block, $block_settings) {
 
-  $innerblock_template = [
-    ['core/heading', ['placeholder' => 'Add a heading...']],
-    ['core/paragraph', ['placeholder' => 'Add your text here...']],
-  ];
-
-  if (!$block) {
-    return;
-  }
-
-  $content_media_style = $block_settings['content_media_style'];
-
-
-  $image = $block_settings['image'];
-  $image_x = $block_settings['image_x'];
-  $image_position_in_mobile = $block_settings['image_position_in_mobile'];
-  $display_icon_under = $block_settings['display_icon_under'];
-
-  $mobile_position_left = $image_position_in_mobile === 'top' ? 'order-none' : 'order-2';
-  $mobile_position_right = $image_position_in_mobile === 'top' ? '-order-1' : 'order-none';
-
-//Valid X and Y
-  $valid_x = ['left', 'right'];
-  $valid_y = ['top', 'bottom'];
-
-// Combine for File Name
-  if (in_array($image_x, $valid_x, true) && in_array($image_position_in_mobile, $valid_y, true)) {
-    $position_class = "swirl--{$image_position_in_mobile}_$image_x";
-  } else {
-    $position_class = 'swirl--bottom_left';
-  }
-
-  $class_attr = nds_get_padding_classes($block_settings);
-
-  $raw_css = isset($block_settings['custom_css']) ? (string)$block_settings['custom_css'] : '';
-
-//  For Render CSS
-  nds_render_css($raw_css);
-
-  ob_start();
-  ?>
-
-
-  <?php if ($content_media_style === "decor") : ?>
-    <section
-      <?php echo nds_block_wrapper_attrs($block, $block_settings); ?>
-      class="nds-content-media overflow-hidden bg-secondary relative nds-dark-theme <?php echo esc_attr($class_attr) ?> nds-content-media--swirl isolate <?php echo esc_html($position_class) ?> <?php echo $display_icon_under ? 'decor-under' : 'decor-above' ?>">
-      <div class="container container-sm">
-        <div class="nds-content-media-flex nds-content-media--decor justify-between">
-          <?php if ($image_x === 'left') : ?>
-            <div class="lg:order-none w-full nds-content-figure <?php echo esc_html($mobile_position_left) ?>">
-              <div class="nds-figure-media lg:max-w-[637px] w-full lg:ml-0 ml-auto">
-                <?php if (!empty($image)) : ?>
-                  <img src="<?php echo esc_url($image['url']); ?>"
-                       decoding="async"
-                       class="lg:w-full w-10/12"
-                       loading="lazy"
-                       width="<?php echo esc_attr($image['width']); ?>"
-                       height="<?php echo esc_attr($image['height']); ?>"
-                       alt="<?php echo esc_attr($image['alt'] ?? ''); ?>">
-                <?php elseif (is_admin()) : ?>
-                  <!-- Show only in editor -->
-                  <img src="https://placehold.co/600x400?text=Add+an+Image"
-                       alt="Placeholder image for editor only">
-                <?php endif; ?>
-              </div>
-            </div>
-          <?php endif; ?>
-
-          <div class="nds-content-content">
-            <InnerBlocks
-              template='<?php echo esc_attr(wp_json_encode($innerblock_template)); ?>'
-              templateLock="false"
-            />
-          </div>
-
-
-          <?php if ($image_x === 'right') : ?>
-            <div class="lg:order-none w-full nds-content-figure <?php echo esc_html($mobile_position_right) ?>">
-              <div class="nds-figure-media lg:max-w-[637px] w-full lg:mr-0 lg:ml-auto ml-0 mr-auto">
-                  <?php if (!empty($image)) : ?>
-                    <img src="<?php echo esc_url($image['url']); ?>"
-                         decoding="async"
-                         loading="lazy"
-                         class="lg:w-full w-10/12"
-                         width="<?php echo esc_attr($image['width']); ?>"
-                         height="<?php echo esc_attr($image['height']); ?>"
-                         alt="<?php echo esc_attr($image['alt'] ?? ''); ?>">
-                  <?php elseif (is_admin()) : ?>
-                  <!-- Show only in editor -->
-                  <img src="https://placehold.co/600x400?text=Add+an+Image"
-                       alt="Placeholder image for editor only">
-                <?php endif; ?>
-              </div>
-            </div>
-          <?php endif; ?>
-        </div>
-      </div>
-    </section>
-  <?php else : ?>
-    <section
-      <?php echo nds_block_wrapper_attrs($block, $block_settings); ?>
-      class="nds-content-media overflow-hidden bg-system-white relative <?php echo esc_attr($class_attr) ?>">
-      <div class="container container-sm">
-        <div class="nds-content-media-flex nds-content-media--default justify-between">
-          <?php if ($image_x === 'left') : ?>
-            <div class="lg:order-none w-full nds-content-figure <?php echo esc_html($mobile_position_left) ?>">
-              <figure class="nds-figure-media lg:max-w-[637px] w-full">
-                <?php if (!empty($image)) : ?>
-                  <img src="<?php echo esc_url($image['url']); ?>"
-                       decoding="async"
-                       loading="lazy"
-                       width="<?php echo esc_attr($image['width']); ?>"
-                       height="<?php echo esc_attr($image['height']); ?>"
-                       alt="<?php echo esc_attr($image['alt'] ?? ''); ?>">
-                <?php elseif (is_admin()) : ?>
-                  <!-- Show only in editor -->
-                  <img src="https://placehold.co/460x571?text=Add+an+Image"
-                       alt="Placeholder image for editor only">
-                <?php endif; ?>
-              </figure>
-            </div>
-          <?php endif; ?>
-
-          <div class="nds-content-content">
-            <InnerBlocks
-              template='<?php echo esc_attr(wp_json_encode($innerblock_template)); ?>'
-              templateLock="false"
-            />
-          </div>
-
-
-          <?php if ($image_x === 'right') : ?>
-            <div class="lg:order-none w-full nds-content-figure <?php echo esc_html($mobile_position_right) ?>">
-              <figure class="nds-figure-media lg:max-w-[637px] w-full">
-                <?php if (!empty($image)) : ?>
-                  <img src="<?php echo esc_url($image['url']); ?>"
-                       decoding="async"
-                       loading="lazy"
-                       width="<?php echo esc_attr($image['width']); ?>"
-                       height="<?php echo esc_attr($image['height']); ?>"
-                       alt="<?php echo esc_attr($image['alt'] ?? ''); ?>">
-                <?php elseif (is_admin()) : ?>
-                  <!-- Show only in editor -->
-                  <img src="https://placehold.co/460x571?text=Add+an+Image"
-                       alt="Placeholder image for editor only">
-                <?php endif; ?>
-              </figure>
-            </div>
-          <?php endif; ?>
-        </div>
-      </div>
-    </section>
-  <?php endif; ?>
-
-
-  <?php
-  return ob_get_clean();
-}
 
 
 // Hero
