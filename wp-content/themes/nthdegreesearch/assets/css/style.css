@@ -545,6 +545,9 @@
   .flex-col {
     flex-direction: column;
   }
+  .flex-row {
+    flex-direction: row;
+  }
   .flex-wrap {
     flex-wrap: wrap;
   }
@@ -707,6 +710,10 @@
     -o-object-fit: cover;
        object-fit: cover;
   }
+  .object-cover\! {
+    -o-object-fit: cover !important;
+       object-fit: cover !important;
+  }
   .object-fill {
     -o-object-fit: fill;
        object-fit: fill;
@@ -786,6 +793,9 @@
   }
   .py-8 {
     padding-block: calc(var(--spacing) * 8);
+  }
+  .py-16 {
+    padding-block: calc(var(--spacing) * 16);
   }
   .py-\[50px\] {
     padding-block: 50px;
@@ -1079,6 +1089,11 @@
       order: 0;
     }
   }
+  .lg\:mx-0 {
+    @media (width >= 1024px) {
+      margin-inline: calc(var(--spacing) * 0);
+    }
+  }
   .lg\:my-0 {
     @media (width >= 1024px) {
       margin-block: calc(var(--spacing) * 0);
@@ -1092,6 +1107,11 @@
   .lg\:mr-0 {
     @media (width >= 1024px) {
       margin-right: calc(var(--spacing) * 0);
+    }
+  }
+  .lg\:mr-auto {
+    @media (width >= 1024px) {
+      margin-right: auto;
     }
   }
   .lg\:ml-0 {
@@ -1154,6 +1174,11 @@
       width: 100%;
     }
   }
+  .lg\:max-w-\[464px\] {
+    @media (width >= 1024px) {
+      max-width: 464px;
+    }
+  }
   .lg\:max-w-\[543px\] {
     @media (width >= 1024px) {
       max-width: 543px;
@@ -1162,6 +1187,11 @@
   .lg\:max-w-\[637px\] {
     @media (width >= 1024px) {
       max-width: 637px;
+    }
+  }
+  .lg\:max-w-\[707px\] {
+    @media (width >= 1024px) {
+      max-width: 707px;
     }
   }
   .lg\:max-w-\[709px\] {
