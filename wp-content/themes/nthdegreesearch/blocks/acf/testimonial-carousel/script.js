@@ -74,14 +74,14 @@ document.addEventListener('DOMContentLoaded', () => {
   const carousels = document.querySelectorAll('.nds_testimonial_carousel')
   carousels.forEach((carousel) => {
     new SplideCarousel(carousel, {
-      perPage: 3,
-      type: 'loop',
+      perPage: 2,
+      type: "loop",
       pagination: false,
       arrows: true,
       breakpoints: {
-        1024: {perPage: 2},
-        768: {perPage: 1},
-      }
-    })
+        1024: { perPage: 2 },
+        768: { perPage: 1 },
+      },
+    });
   })
 })

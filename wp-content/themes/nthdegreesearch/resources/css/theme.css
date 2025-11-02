@@ -14,6 +14,7 @@
     --color-dark: var(--wp--preset--color--dark);
     --color-light: var(--wp--preset--color--light);
     --color-system-base: var(--nds-color-base);
+    --color-system-accent: #21272A;
     /*--font-proxima-nova-condensed: var(--wp--preset--font-family--proxima-nova-condensed, 'Proxima Nova Cond', sans-serif);*/
     --font-primary: var(--wp--preset--font-family--em-one), 'Em One';
     --font-secondary: var(--wp--preset--font-family--raleway), 'Raleway';

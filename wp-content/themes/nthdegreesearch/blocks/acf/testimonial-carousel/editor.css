@@ -6,7 +6,7 @@
 }
 
 .testimonial-carousel-list--editor > * {
-    flex: 0 0 33.33333%;
-    max-width: 33.33333%;
+    flex: 0 0 50%;
+    max-width: 50%;
     padding-inline: var(--inline-spacing);
 }
