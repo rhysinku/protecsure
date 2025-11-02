@@ -427,9 +427,6 @@
   .h-\[100vh\] {
     height: 100vh;
   }
-  .h-\[815vh\] {
-    height: 815vh;
-  }
   .h-full {
     height: 100%;
   }
@@ -649,9 +646,6 @@
   }
   .bg-primary-tint {
     background-color: var(--color-primary-tint);
-  }
-  .bg-red-950 {
-    background-color: var(--color-red-950);
   }
   .bg-secondary {
     background-color: var(--color-secondary);

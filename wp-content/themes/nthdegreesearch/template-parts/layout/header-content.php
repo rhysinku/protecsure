@@ -26,7 +26,7 @@ $header_2_nav = $acf_header_settings['header_2_menu'] ?? '';
 
 <header class="nds-header <?php echo $header_class; ?> min-lg:py-0">
   <div class="w-full mx-auto max-w-[1240px] relative">
-    <div class="lg:flex lg:justify-between lg:items-center shadow-lg px-10 rounded-full py-2.5">
+    <div class="lg:flex lg:justify-between lg:items-center shadow-lg px-10 rounded-full py-2.5 bg-white">
       <div class="w-full flex justify-between items-center xl:gap-x-16 gap-x-2.5">
         <div class="relative max-w-[144px]">
           <?php if (has_custom_logo()) { ?>
