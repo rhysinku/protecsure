@@ -12,6 +12,7 @@
 /*Utils*/
 @import './utils/spacing.css';
 @import './utils/safelist.css';
+@import './utils/core.css';
 
 /*Plugin*/
 

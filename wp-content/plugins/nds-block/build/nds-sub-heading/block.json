@@ -1,0 +1,24 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "nds-plugin-block/sub-heading",
+  "version": "0.1.0",
+  "title": "Sub Heading",
+  "category": "widgets",
+  "icon": "editor-textcolor",
+  "description": "Sub Heading.",
+  "example": {},
+  "supports": {
+    "html": false
+  },
+  "attributes": {
+    "subHeading": {
+      "type": "string"
+    }
+  },
+  "textdomain": "nds-block",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "viewScript": "file:./view.js"
+}
