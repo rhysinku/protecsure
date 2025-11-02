@@ -6,7 +6,7 @@
  * @package NDS
  */
 
-$header_class = 'fixed z-50 w-full';
+$header_class = 'fixed z-50 left-0 right-0';
 
 $acf_general_settings = get_field('acf_general_settings', 'option');
 $acf_header_settings = get_field('acf_header_settings', 'option');
