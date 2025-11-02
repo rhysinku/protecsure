@@ -5,9 +5,12 @@
 /*!*******************************!*\
   !*** ./resources/css/app.css ***!
   \*******************************/
-/***/ (() => {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-throw new Error("Module build failed (from ./node_modules/mini-css-extract-plugin/dist/loader.js):\nModuleBuildError: Module build failed (from ./node_modules/css-loader/dist/cjs.js):\nError: Can't resolve '../../assets/images/swirl/background-swirl.svg' in '/var/www/html/wp-content/themes/nthdegreesearch/resources/css'\n    at finishWithoutResolve (/var/www/html/wp-content/themes/nthdegreesearch/node_modules/enhanced-resolve/lib/Resolver.js:564:18)\n    at /var/www/html/wp-content/themes/nthdegreesearch/node_modules/enhanced-resolve/lib/Resolver.js:656:15\n    at /var/www/html/wp-content/themes/nthdegreesearch/node_modules/enhanced-resolve/lib/Resolver.js:718:5\n    at eval (eval at create (/var/www/html/wp-content/themes/nthdegreesearch/node_modules/tapable/lib/HookCodeFactory.js:33:10), <anonymous>:16:1)\n    at /var/www/html/wp-content/themes/nthdegreesearch/node_modules/enhanced-resolve/lib/Resolver.js:718:5\n    at eval (eval at create (/var/www/html/wp-content/themes/nthdegreesearch/node_modules/tapable/lib/HookCodeFactory.js:33:10), <anonymous>:27:1)\n    at /var/www/html/wp-content/themes/nthdegreesearch/node_modules/enhanced-resolve/lib/DescriptionFilePlugin.js:89:43\n    at /var/www/html/wp-content/themes/nthdegreesearch/node_modules/enhanced-resolve/lib/Resolver.js:718:5\n    at eval (eval at create (/var/www/html/wp-content/themes/nthdegreesearch/node_modules/tapable/lib/HookCodeFactory.js:33:10), <anonymous>:15:1)\n    at /var/www/html/wp-content/themes/nthdegreesearch/node_modules/enhanced-resolve/lib/Resolver.js:718:5\n    at eval (eval at create (/var/www/html/wp-content/themes/nthdegreesearch/node_modules/tapable/lib/HookCodeFactory.js:33:10), <anonymous>:16:1)\n    at /var/www/html/wp-content/themes/nthdegreesearch/node_modules/enhanced-resolve/lib/Resolver.js:718:5\n    at eval (eval at create (/var/www/html/wp-content/themes/nthdegreesearch/node_modules/tapable/lib/HookCodeFactory.js:33:10), <anonymous>:16:1)\n    at /var/www/html/wp-content/themes/nthdegreesearch/node_modules/enhanced-resolve/lib/Resolver.js:718:5\n    at eval (eval at create (/var/www/html/wp-content/themes/nthdegreesearch/node_modules/tapable/lib/HookCodeFactory.js:33:10), <anonymous>:27:1)\n    at /var/www/html/wp-content/themes/nthdegreesearch/node_modules/enhanced-resolve/lib/DescriptionFilePlugin.js:89:43\n    at /var/www/html/wp-content/themes/nthdegreesearch/node_modules/enhanced-resolve/lib/Resolver.js:718:5\n    at eval (eval at create (/var/www/html/wp-content/themes/nthdegreesearch/node_modules/tapable/lib/HookCodeFactory.js:33:10), <anonymous>:16:1)\n    at /var/www/html/wp-content/themes/nthdegreesearch/node_modules/enhanced-resolve/lib/Resolver.js:718:5\n    at eval (eval at create (/var/www/html/wp-content/themes/nthdegreesearch/node_modules/tapable/lib/HookCodeFactory.js:33:10), <anonymous>:15:1)\n    at /var/www/html/wp-content/themes/nthdegreesearch/node_modules/enhanced-resolve/lib/DirectoryExistsPlugin.js:41:15\n    at process.processTicksAndRejections (node:internal/process/task_queues:89:21)\n    at processResult (/var/www/html/wp-content/themes/nthdegreesearch/node_modules/webpack/lib/NormalModule.js:891:19)\n    at /var/www/html/wp-content/themes/nthdegreesearch/node_modules/webpack/lib/NormalModule.js:1037:5\n    at /var/www/html/wp-content/themes/nthdegreesearch/node_modules/loader-runner/lib/LoaderRunner.js:400:11\n    at /var/www/html/wp-content/themes/nthdegreesearch/node_modules/loader-runner/lib/LoaderRunner.js:252:18\n    at context.callback (/var/www/html/wp-content/themes/nthdegreesearch/node_modules/loader-runner/lib/LoaderRunner.js:124:13)\n    at Object.loader (/var/www/html/wp-content/themes/nthdegreesearch/node_modules/css-loader/dist/index.js:155:5)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)");
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
 
 /***/ }),
 
@@ -331,7 +334,8 @@ document.addEventListener('DOMContentLoaded', function () {
 /******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
 /******/ 		var installedChunks = {
 /******/ 			"/js/script": 0,
-/******/ 			"css/editor-style": 0
+/******/ 			"css/editor-style": 0,
+/******/ 			"css/style": 0
 /******/ 		};
 /******/ 		
 /******/ 		// no chunk on demand loading
@@ -381,9 +385,9 @@ document.addEventListener('DOMContentLoaded', function () {
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
-/******/ 	__webpack_require__.O(undefined, ["css/editor-style"], () => (__webpack_require__("./resources/js/app.js")))
-/******/ 	__webpack_require__.O(undefined, ["css/editor-style"], () => (__webpack_require__("./resources/css/app.css")))
-/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["css/editor-style"], () => (__webpack_require__("./resources/css/editor-style.css")))
+/******/ 	__webpack_require__.O(undefined, ["css/editor-style","css/style"], () => (__webpack_require__("./resources/js/app.js")))
+/******/ 	__webpack_require__.O(undefined, ["css/editor-style","css/style"], () => (__webpack_require__("./resources/css/app.css")))
+/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["css/editor-style","css/style"], () => (__webpack_require__("./resources/css/editor-style.css")))
 /******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
 /******/ 	
 /******/ })()

@@ -15,12 +15,11 @@ export default function Edit(props) {
 	});
 	return (
 		<div {...blockProps}>
-			<span className="nds-icon size-3.5 block relative">
-			</span>
+			<span className="nds-icon size-3.5 block relative"></span>
 			<RichText
 				tagName={"span"}
 				value={subHeading}
-				className={"font-light text-base block"}
+				className={"font-light text-base text-system-base block"}
 				allowedFormats={[]}
 				onChange={(newVal) => setAttributes({ subHeading: newVal })}
 				placeholder={"sub Heading"}

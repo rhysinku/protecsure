@@ -8,12 +8,11 @@ export default function save(props) {
 	});
 	return (
 		<div {...blockProps}>
-			<span className="nds-icon size-3.5 block relative">
-			</span>
+			<span className="nds-icon size-3.5 block relative"></span>
 			<RichText.Content
 				tagName={"span"}
 				value={subHeading}
-				className={"font-light text-base block"}
+				className={"font-light text-base text-system-base block"}
 			/>
 		</div>
 	);

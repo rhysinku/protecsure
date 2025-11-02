@@ -51,6 +51,7 @@
     --color-primary: var(--nds-color-primary, var(--wp--preset--color--primary));
     --color-secondary: var(--nds-color-secondary, var(--wp--preset--color--secondary));
     --color-trinary: var(--nds-color-trinary, var(--wp--preset--color--trinary));
+    --color-system-base: var(--nds-color-base);
     --font-primary: var(--wp--preset--font-family--em-one), 'Em One';
     --font-secondary: var(--wp--preset--font-family--raleway), 'Raleway';
     --text-md: var(--wp--preset--font-size--md);

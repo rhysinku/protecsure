@@ -51,6 +51,7 @@
     --color-primary: var(--nds-color-primary, var(--wp--preset--color--primary));
     --color-secondary: var(--nds-color-secondary, var(--wp--preset--color--secondary));
     --color-trinary: var(--nds-color-trinary, var(--wp--preset--color--trinary));
+    --color-system-base: var(--nds-color-base);
     --font-primary: var(--wp--preset--font-family--em-one), 'Em One';
     --font-secondary: var(--wp--preset--font-family--raleway), 'Raleway';
     --text-md: var(--wp--preset--font-size--md);
@@ -447,10 +448,6 @@
   }
   .w-full {
     width: 100%;
-  }
-  .w-max {
-    width: -moz-max-content;
-    width: max-content;
   }
   .max-w-\[144px\] {
     max-width: 144px;
@@ -906,6 +903,9 @@
   }
   .text-secondary {
     color: var(--color-secondary);
+  }
+  .text-system-base {
+    color: var(--color-system-base);
   }
   .text-white {
     color: var(--color-white);
@@ -1753,38 +1753,6 @@
 .footer-info a {
   color: var(--color-white);
   text-decoration-line: none;
-}
-.variant-1:before {
-  background: url(../images/background-swirl.svg?f4ba8f766ce0a321499e49c0af91f023) center no-repeat;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0.5;
-}
-.variant-2:before {
-  background: url(../images/variant-2.svg?00ad9dec6514b3ce5118131f7c81e824) center no-repeat;
-  left: 0;
-  width: 871px;
-  height: 783px;
-  bottom: 0;
-}
-.variant-3:before {
-  background: url(../images/varient-3.svg?384c73e3f1ce646c71897eed30e44c15) center no-repeat;
-  width: 1007px;
-  height: 832px;
-  bottom: 0;
-  right: 0;
-}
-.nds-swirl--container {
-  position: relative;
-  isolation: isolate;
-}
-.nds-swirl--container:before {
-  content: '';
-  display: block;
-  z-index: -1;
-  position: absolute;
 }
 @layer components {
   .nds-padding-sm {
