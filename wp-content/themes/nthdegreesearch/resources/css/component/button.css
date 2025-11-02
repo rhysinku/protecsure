@@ -4,7 +4,7 @@
 }
 
 .nds-btn {
-  @apply flex gap-[0.813rem] justify-center items-center !no-underline text-[18px] italic font-semibold leading-[100%] rounded-full py-3 px-[30px] transition duration-300 [transition-timing-function:cubic-bezier(0.46,0.03,0.52,0.96)];
+  @apply flex gap-[0.813rem] justify-center items-center !no-underline text-[18px] italic font-semibold leading-[100%] rounded-full py-3 px-[30px] transition duration-300 [transition-timing-function:cubic-bezier(0.46,0.03,0.52,0.96)] relative;
 }
 
 .nds-btn-sm {
@@ -15,12 +15,44 @@
   @apply text-[.8125rem] leading-[184.615%] py-2 px-6;
 }
 
-.nds-btn-primary {
-  @apply bg-secondary hover:bg-secondary font-bold text-white;
+.nds-btn-secondary {
+  @apply bg-trinary hover:bg-secondary font-bold text-white;
 }
 
-.nds-btn-secondary {
+.nds-btn-primary {
   @apply bg-primary text-white hover:bg-primary;
+}
+
+.nds-btn-link-large {
+  @apply p-0 text-[24] pb-3;
+}
+
+.nds-btn-link-large::before {
+  content: '';
+  width: 0%;
+  height: 1px;
+  transition: all 500ms ease-in-out;
+  @apply bg-primary absolute bottom-0 left-0
+}
+
+.nds-btn-link-large:hover::before {
+  width: 100%;
+}
+
+.nds-btn-link-small {
+  @apply text-primary text-base p-0 pb-3;
+}
+
+.nds-btn-link-small::before {
+  content: '';
+  width: 0%;
+  height: 1px;
+  transition: all 500ms ease-in-out;
+  @apply bg-primary absolute bottom-0 left-0
+}
+
+.nds-btn-link-small:hover::before {
+  width: 100%;
 }
 
 }

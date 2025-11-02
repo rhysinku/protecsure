@@ -4,6 +4,7 @@
 
 require_once get_template_directory() . '/inc/blocks/content-media.php';
 require_once get_template_directory() . '/inc/blocks/testimonial-carousel.php';
+require_once get_template_directory() . '/inc/blocks/button-group.php';
 
 
 
@@ -151,67 +152,6 @@ function nds_button_render($buttons, $buttons_arr) {
 
   endif;
 
-  return ob_get_clean();
-}
-
-/**
- * Button Group render
- */
-
-function nds_button_group_render($buttons, $settings, $block_id_attr) {
-  if (!$buttons) {
-    return;
-  }
-  ob_start();
-
-  $alignment = $settings['alignment'];
-  $gap = $settings['gap'];
-
-  if ($gap === '0') {
-    $gap = 'gap-0';
-  } elseif ($gap === 'sm') {
-    $gap = 'gap-2.5';
-  } elseif ($gap === 'lg') {
-    $gap = 'gap-[1.875rem]';
-  } else {
-    $gap = 'gap-5';
-  }
-
-  ?>
-  <div <?php echo $block_id_attr ?>
-    class="nds-button-group flex items-center flex-wrap <?php echo 'justify-' . esc_html($alignment) ?> <?php echo esc_html($gap) ?>">
-    <?php if ($buttons) : ?>
-      <?php foreach ($buttons as $button) :
-        $button_type = $button['button_type'];
-        $button_link = $button['link'];
-        ?>
-
-        <?php if ($button_type === 'google') : ?>
-        <a href="<?php echo esc_url($button_link['url']) ?>" target="<?php echo esc_attr($button_link['target']) ?>">
-          <img
-            class="block object-center object-contain max-w-[166px]"
-            src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/<?php echo $button_type ?>.svg"
-            width="166" height="58" decoding="async" loading="lazy"
-            alt="">
-        </a>
-      <?php elseif ($button_type === 'apple') : ?>
-        <a href="<?php echo esc_url($button_link['url']) ?>" target="<?php echo esc_attr($button_link['target']) ?>">
-          <img
-            class="block object-center object-contain max-w-[166px]"
-            src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/<?php echo $button_type ?>.svg"
-            width="166" height="58" decoding="async" loading="lazy"
-            alt="">
-        </a>
-      <?php else :
-        $button_style = $button['button_style'];
-        ?>
-        <a href="<?php echo esc_html($button_link['url']) ?? '' ?>" class="nds-btn nds-btn-<?php echo $button_style; ?>"
-           target="<?php echo esc_html($button_link['target']) ?>"><?php echo esc_html($button_link['title']) ?></a>
-      <?php endif; ?>
-      <?php endforeach; ?>
-    <?php endif; ?>
-  </div>
-  <?php
   return ob_get_clean();
 }
 
